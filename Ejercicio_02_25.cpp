@@ -11,7 +11,7 @@ Número de ejericio: 25
 
 Problema planteado:  Genere un vector de N elementos y llénelos aleatoriamente entre
 valores de 1 a 100 e  indique el mayor elemento, el menor elemento y el promedio.
-*/\
+*/
 
 #include <iostream>
 

@@ -21,11 +21,9 @@ int main (){
     int vector1[10];
     int contador = 0, i;
     for (i=0; i<10 ; i++){
-    do {
     cout << "Ingresa un numero por favor: ";
     cin >> vector1[i];
-    }
-    while (vector1[i] >=0);
+
     }
     for (i=0 ; i < 10 ; i++){
     cout << vector1[i]<<endl;

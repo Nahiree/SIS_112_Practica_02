@@ -21,16 +21,17 @@ int main (){
     cout << "Ingresa el numero de elementos de la cadena: ";
     cin >> cant_carc;
     char cadena1[cant_carc], cadena2[cant_carc];
+    cout << "Ingresa los elementos de la cadena: ";
     for (i=0 ; i < cant_carc ; i++){
-    cout << "Ingresa el primer elemento de la cadena: ";
     cin >> cadena1[i];
     }
     for (i=0 ; i < cant_carc ; i++){
-    cadena2[i] = cadena1[i] + 32;
+    cadena2[i]=cadena1[i]+('a'-'A');
     }
     cout << "La nueva cadena es: " << endl;
+
     for (i=0 ; i < cant_carc ; i++){
-    cout << cadena2[i]<< endl;
+    cout << cadena2[i];
     }
     return 0;
 }

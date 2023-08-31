@@ -15,13 +15,13 @@ son iguales y  “Diferentes” si no lo son. Serán iguales cuando en la misma posic
 ambos vectores se  tenga el mismo valor para todos los elementos.
 */
 #include <iostream>
-#include <string.h>
+#include <stdio.h>
 
  using namespace std;
 
-main(){
-    string cadena1[] = {"Carlos", "Micaela", "Mario", "Jose", "Antonia", "Daniela", "Estrella"};
-    string cadena2[] = {"Carlos", "Micaela", "Maria", "Jose", "Antonia", "Daniela", "Estrella"};
+ int main(){
+    string cadena1 [] = {"Carlos", "Micaela", "Mario", "Jose", "Antonia", "Daniela", "Estrella"};
+    string cadena2 [] = {"Carlos", "Micaela", "Maria", "Jose", "Antonia", "Daniela", "Estrella"};
     int i;
     cout << "Las cadenas son: "<< endl;
     cout << "Cadena uno: "<<endl;
@@ -32,8 +32,9 @@ main(){
     for (i=0;i<7; i++){
     cout << cadena2[i]<<endl;
     }
-    if (strcmp(cadena1,cadena2)==0){
-        cout << "Las cadenas son iguales." << endl;
+
+    if ( cadena1.compare(cadena2) == 0){
+    cout << "Las cadenas son iguales." << endl;
     }
     else
         cout << "Las cadenas son distintas. "<<endl;

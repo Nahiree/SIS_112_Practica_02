@@ -26,10 +26,12 @@ int main(){
     for  (i = 0; i < 9 ; i++){
     cout << arreglo2[i]<< ", ";
     }
-    for (i = 0 ; i<10; i++){
-    arreglo3[i*2]=arreglo1[i];
+    for (i = 0 ; i<20; i+2){
+    arreglo3[i]=arreglo1[i*2];
     }
-
+    for (i = 1 ; i<10; i++){
+    arreglo3[(i*2)-1]=arreglo2[i];
+    }
     for (i=0 ; i<20 ; i++){
     cout << arreglo3[i]<<endl;
     }
