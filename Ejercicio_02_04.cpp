@@ -34,8 +34,8 @@ int main (){
     else if (edad[i]<18)
         contador_me++;
     }
-    p_mayores = ((float (contador_ma)/50))*100;
-    p_menores = ((float(contador_me)/50))*100;
+    p_mayores = ((float (contador_ma)*100))/50;
+    p_menores = ((float(contador_me)*100))/50;
     cout << "El porcentaje de personas mayores es de: "<< p_mayores << " %. "<<endl;
     cout << "El porcentaje de personas menores es de: "<< p_menores<< " %. "<<endl;
     return 0;
