@@ -5,7 +5,7 @@ Autor: Nahir Casablanca Mansilla
 
 Fecha creación: 30/08/2023
 
-Fecha modificación: 30/08/2023
+Fecha modificación: 31/08/2023
 
 Número de ejericio: 18
 
@@ -19,13 +19,20 @@ using namespace std;
 
 int main (){
     int vector1[10];
-    int contador = 0, i;
+    int contador = 0, i, aux;
     for (i=0; i<10 ; i++){
     cout << "Ingresa un numero por favor: ";
-    cin >> vector1[i];
-
+    cin >> aux;
+    if (aux>0){
+       vector1[i] = aux;
+       contador++;
     }
-    for (i=0 ; i < 10 ; i++){
+    else if (aux <0)
+        break;
+    }
+    cout << endl;
+    cout << "El vector es: "<< endl;
+    for (i=0 ; i < contador ; i++){
     cout << vector1[i]<<endl;
     }
     return 0;

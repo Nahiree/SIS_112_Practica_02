@@ -20,7 +20,7 @@ arreglo que contenga  los números capicúa contenidos en el primero.
 using namespace std;
 
 int main (){
-    int n, m, numero, reversa=0, copia, i;
+    int n, m, numero, reversa=0, copia, i,j=0;
     srand((unsigned)time(0));
     cout << "Ingresa la cantidad de elementos que tendra el arreglo: ";
     cin >> numero;
@@ -34,13 +34,21 @@ int main (){
     cout << arreglo1[i] << endl;
     }
     cout << endl;
-    for (i=0 ; i<=numero ;i++){
-    copia= arreglo1[i];
-    while (copia !=0){
-    reversa= reversa*10+ copia%10;
-    copia = copia%10;
+    for (i=0 ; i<numero ;i++){
+    copia = arreglo1[i];
+    reversa=0;
+    while (copia > 0){
+    reversa = reversa * 10 + copia%10;
+    copia = copia/10;
     }
-    cout << reversa;
+    if (arreglo1[i]==reversa){
+        arreglo2[j]=arreglo1[i];
+        j++;
+    }
+    }
+    cout << "Los elementos capicua son: "<<endl;
+    for (i=0; i< j ; i++){
+    cout << arreglo2[i]<< endl;
     }
     return 0;
 }

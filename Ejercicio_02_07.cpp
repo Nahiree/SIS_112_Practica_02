@@ -5,7 +5,7 @@ Autor: Nahir Casablanca Mansilla
 
 Fecha creación: 30/08/2023
 
-Fecha modificación: 30/08/2023
+Fecha modificación: 31/08/2023
 
 Número de ejericio: 7
 
@@ -15,14 +15,14 @@ son iguales y  “Diferentes” si no lo son. Serán iguales cuando en la misma posic
 ambos vectores se  tenga el mismo valor para todos los elementos.
 */
 #include <iostream>
-#include <stdio.h>
-
+#include <vector>
+#include <string>
  using namespace std;
 
  int main(){
-    string cadena1 [] = {"Carlos", "Micaela", "Mario", "Jose", "Antonia", "Daniela", "Estrella"};
-    string cadena2 [] = {"Carlos", "Micaela", "Maria", "Jose", "Antonia", "Daniela", "Estrella"};
-    int i;
+    vector<string> cadena1 = {"Carlos", "Micaela", "Mario", "Jose", "Antonia", "Daniela", "Estrella"};
+    vector<string> cadena2 = {"Carlos", "Micaela", "Maria", "Jose", "Antonia", "Daniela", "Estrella"};
+    int i, contador;
     cout << "Las cadenas son: "<< endl;
     cout << "Cadena uno: "<<endl;
     for (i=0;i<7; i++){
@@ -32,11 +32,15 @@ ambos vectores se  tenga el mismo valor para todos los elementos.
     for (i=0;i<7; i++){
     cout << cadena2[i]<<endl;
     }
-
-    if ( cadena1.compare(cadena2) == 0){
-    cout << "Las cadenas son iguales." << endl;
+    for (i=0; i <7 ; i++){
+    if ( cadena1[i]==cadena2[i]){
+    contador++;
     }
+    }
+    cout << endl;
+    if (contador != 7)
+        cout << "Distintos. "<<endl;
     else
-        cout << "Las cadenas son distintas. "<<endl;
+        cout << "Iguales."<<endl;
     return 0;
  }

@@ -24,16 +24,26 @@ CU 109.412
 */
 
 #include <iostream>
-#include <string.h>
-
+#include <vector>
+#include <string>
 using namespace std;
 
 int main (){
     int toneladas []= {998000, 876500, 786670, 6363143, 135567,109412};
-    string elementos [] = {"SN", "SB","AU", "PT", "AG", "CU"};
+    vector <string>elementos = {"SN", "SB","AU", "PT", "AG", "CU"};
     string elemento;
+    int i,mayor=0, menor = 1000000, j, k;
     cout << "Ingrese el elemento a buscar (todo con mayusculas): ";
-    cin >> elemento;
-    cout << toneladas [elemento.find(elementos);]
+    cin>> elemento;
+    for (i=0; i<7 ; i++){
+    if (elemento == elementos[i]){
+    cout << "Elemento: "<< elementos[i]<< endl;
+    cout << "Toneladas: " << toneladas[i];
+    }
+    }
+    cout << "Ordenado del mayor al menor es: "<< endl;
+    for (i=0; i<7 ; i++){
+        cout << elementos[i] << " : "<< toneladas[i]<< endl;
+    }
     return 0;
 }
